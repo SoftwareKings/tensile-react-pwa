@@ -5,10 +5,14 @@ import { Router, Route, browserHistory } from 'react-router';
 import Shell from './components/shell';
 
 ReactDOM.render((
-  <Shell />
-  // <Router history={browserHistory}>
-  //   <Route path="/" component={Shell}>
-  //     <Route path="*" component={AMPDocument} />
-  //   </Route>
-  // </Router>
+  <Router history={browserHistory}>
+    <Route path="/" component={Shell}>
+      <Route path="amp/**" component={
+        props => <AMPDocument src={props.params.splat} />
+      } />
+      <Route path="*" component={
+        () => <AMPDocument src={window.location.href} />
+      } />
+    </Route>
+  </Router>
 ), document.getElementById('root'));
