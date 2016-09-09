@@ -9,13 +9,13 @@ export default class Shell extends React.Component {
           <article className="card">
             <Link to="/content/article.amp.max.html">
               <h4>Document with relative URL</h4>
-              <div className="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+              <div className="detail">Bookmarks to this link will NOT render the shell.</div>
             </Link>
           </article>
           <article className="card">
-            <Link to="http://localhost:8080/content/youtube.amp.max.html">
-              <h4>Document with absolute URL on same domain</h4>
-              <div className="detail">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</div>
+            <Link to="amp/http://localhost:8080/content/youtube.amp.max.html">
+              <h4>Document with absolute URL</h4>
+              <div className="detail">Bookmarks to this link will render the shell.</div>
             </Link>
           </article>
           <article className="card">
