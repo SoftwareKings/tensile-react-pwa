@@ -21,6 +21,12 @@
 }
 
 .article h3 {
+<<<<<<< HEAD
+=======
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  font-size: 22pt;
+>>>>>>> 84b01f0... change article title font
   color: white;
   letter-spacing: 2px;
   position: absolute;
