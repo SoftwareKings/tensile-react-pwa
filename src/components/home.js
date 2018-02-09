@@ -63,12 +63,20 @@ export default class Home extends React.Component {
       const selectedArticleChildren = Array.from(this.selectedArticle_.getElementsByTagName('*'));
       const elementsToFadeOut = selectedArticleChildren.concat(otherArticlesToFade);
 
+      // Article height !== height of hero image in responsive layout, so animate to the latter.
+      const oneOverAspectRatio = 0.6;
+      const responsiveHeight = (window.innerWidth || document.documentElement.clientWidth) * oneOverAspectRatio);
+
       this.timeline_ = new TimelineLite();
+<<<<<<< HEAD
 <<<<<<< HEAD
       this.timeline_.to(this.selectedArticle_, duration, {y: toY, ease: Power1.easeOut, onComplete:() => {
 =======
       this.timeline_.to(this.selectedArticle_, duration, {y: toY, force3D: true, onComplete:() => {
 >>>>>>> f585081... tweak animations
+=======
+      this.timeline_.to(this.selectedArticle_, duration, {y: toY, height: responsiveHeight, onComplete:() => {
+>>>>>>> 335067e... animate hero image height to responsive height
             // Reset window scroll so top of article is displayed.
             const previousScrollY = window.scrollY;
             window.scrollTo(0, 0);
@@ -84,15 +92,20 @@ export default class Home extends React.Component {
             setTimeout(callback, enterAnimationDuration + epsilon);
           }})
 <<<<<<< HEAD
+<<<<<<< HEAD
           .to(elementsToFadeOut, duration * 0.67, {opacity: 0}, 0);
 =======
           .to(elementsToFadeOut, duration * 0.67, {opacity: 0, force3D: true}, 0);
 >>>>>>> f585081... tweak animations
+=======
+          .to(elementsToFadeOut, duration * 0.67, {opacity: 0}, 0);
+>>>>>>> 335067e... animate hero image height to responsive height
     } else {
       callback();
     }
   }
 
+  /** @private */
   inViewport_(element) {
     const bounds = element.getBoundingClientRect();
     const width = (window.innerWidth || document.documentElement.clientWidth);
