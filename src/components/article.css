@@ -3,7 +3,7 @@
   margin-left: -15px;
   margin-right: -15px;
   margin-bottom: 5px;
-  height: 225px;
+  height: 240px;
   position: relative;
 }
 
@@ -17,41 +17,29 @@
   width: 100%;
   height: 60px;
   position: absolute;
-  top: 165px;
+  top: 180px;
 }
 
 .article h3 {
-<<<<<<< HEAD
-=======
-  font-family: 'Playfair Display', serif;
-  font-weight: bold;
+  font-family: 'Playfair Display SC', serif;
+  font-weight: normal;
   font-size: 22pt;
->>>>>>> 84b01f0... change article title font
   color: white;
   letter-spacing: 2px;
   position: absolute;
-<<<<<<< HEAD
   top: 30px;
-  left: 60px;
-  right: 60px;
-=======
-  top: 25px;
   left: 12%;
   right: 12%;
->>>>>>> ad00049... add home->article transition animation
   margin: 0;
 }
 
 .article h4 {
+  font-family: 'Muli', sans-serif;
+  font-weight: normal;
   color: white;
-  font-size: 16px;
+  font-size: 8pt;
   letter-spacing: 1px;
   position: absolute;
-<<<<<<< HEAD
-  top: 190px;
-  left: 60px;
-=======
-  top: 185px;
+  top: 200px;
   left: 12%;
->>>>>>> ad00049... add home->article transition animation
 }
